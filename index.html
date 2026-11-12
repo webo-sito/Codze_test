@@ -1452,7 +1452,7 @@ function show(state,text){
  else{
   sum.hidden=false;
   if(state==='error'){H.textContent='We couldn’t send your inquiry.';P.textContent='Something went wrong, so nothing was sent. You can try again, or copy your message and send it another way.'}
-  else if(state==='notify'){H.textContent='Your inquiry reached the server, but Telegram delivery was not confirmed.';P.textContent='The website did not confirm that the Telegram notification was delivered. Please don’t assume the studio has received it; use the copy option below if you need to contact them now.'}
+  else if(state==='notify'){H.textContent='Your inquiry reached the server, but Telegram delivery was not confirmed.';P.textContent='Your request has been saved successfully. The notification to the studio could not be confirmed, so please don’t submit the same request again. If you need an immediate reply, you can also contact the studio directly.'}
   else{H.textContent='Your inquiry is ready, but it hasn’t been sent.';P.textContent='This website can’t send messages yet, so nothing has been delivered. Copy your message below and send it to the studio through the contact details they share with you.'}
   const note=document.createElement('span');note.className='ce-cp';note.setAttribute('aria-live','polite');
   act.append(btn('Copy message',async()=>{note.textContent=(await copy())?'Copied.':'Couldn’t copy automatically. Select the text above and copy it.'}));
