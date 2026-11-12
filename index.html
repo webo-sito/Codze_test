@@ -761,6 +761,73 @@ textarea.ce-in{min-height:120px;resize:vertical;line-height:1.5}
 .ce-ref.r3,.ce-ref.r4{display:none}.ce-ref.r1{left:3%;top:34px;width:92px}.ce-ref.r2{right:3%;top:30px;width:104px}
 .ft-grid{grid-template-columns:1fr 1fr}.ft-brand{grid-column:1/-1}.ft-col.ct{grid-column:1/-1}}
 @media(prefers-reduced-motion:reduce){.ce-st:not([hidden]){animation:none}}
+
+/* ---------- CODZE commerce catalog ---------- */
+.shop{position:relative;padding:clamp(88px,13vh,150px) 0;background:linear-gradient(180deg,#08100e,#030706 78%);overflow:hidden}
+.shop:before{content:"";position:absolute;inset:0 0 auto;height:55%;pointer-events:none;background:radial-gradient(60% 60% at 85% 10%,rgba(0,166,136,.13),transparent 70%)}
+.shop-head{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:end;margin-bottom:48px}
+.shop h2{font:400 clamp(2.7rem,6vw,5.5rem)/.98 var(--serif);letter-spacing:-.025em}
+.shop-intro{color:var(--muted);line-height:1.65;max-width:42ch}
+.shop-grid{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.shop-card{min-width:0;border:1px solid rgba(255,255,255,.1);border-radius:22px;overflow:hidden;background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.012));transition:transform .35s var(--ease),border-color .35s}
+.shop-card:hover{transform:translateY(-5px);border-color:rgba(134,224,143,.42)}
+.shop-art{position:relative;aspect-ratio:16/9;overflow:hidden;display:grid;place-items:center;background:radial-gradient(70% 80% at 50% 30%,rgba(0,166,136,.24),transparent 72%),linear-gradient(145deg,#14211d,#080d0b)}
+.shop-art img{width:100%;height:100%;object-fit:cover}
+.shop-art-mark{font:400 clamp(2rem,5vw,4rem)/1 var(--serif);letter-spacing:.02em;color:rgba(242,245,243,.9)}
+.shop-art-mark:after{content:"";display:block;width:42px;height:2px;background:var(--mint);margin:16px auto 0}
+.shop-body{padding:clamp(18px,2.6vw,28px)}
+.shop-meta{display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--mint);font-size:.72rem;letter-spacing:.13em;text-transform:uppercase}
+.shop-card h3{font:400 clamp(1.5rem,2.8vw,2.15rem)/1.08 var(--serif);margin:14px 0 10px}
+.shop-desc{color:var(--muted);line-height:1.55;min-height:3.1em}
+.shop-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:24px}
+.shop-price{font-size:.9rem;color:var(--text);font-weight:600}
+.shop-actions{display:flex;gap:8px;flex-wrap:wrap}
+.shop-btn{min-height:42px;padding:0 16px;border-radius:99px;border:1px solid rgba(255,255,255,.2);background:transparent;color:var(--text);font:500 .88rem var(--sans);cursor:pointer}
+.shop-btn.primary{background:var(--mint);color:#04120b;border-color:var(--mint)}
+.shop-btn:hover{border-color:var(--mint)}
+.shop-empty{grid-column:1/-1;padding:36px;border:1px dashed rgba(255,255,255,.2);border-radius:18px;color:var(--muted);text-align:center;line-height:1.6}
+.shop-dialog{width:min(560px,calc(100% - 28px));max-height:85svh;overflow:auto;margin:auto;border:1px solid rgba(134,224,143,.3);border-radius:22px;background:#0c1412;color:var(--text);padding:28px;box-shadow:0 30px 90px #0009}
+.shop-dialog::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(6px)}
+.shop-dialog h3{font:400 2rem var(--serif);margin:10px 0}
+.shop-dialog p{color:var(--muted);line-height:1.6}
+.shop-dialog .shop-actions{margin-top:24px}
+.shop-form-pick{border:1px solid rgba(134,224,143,.24);border-radius:14px;padding:16px;margin:0 0 18px;background:rgba(134,224,143,.045)}
+.shop-form-pick label{display:block;margin-bottom:8px;font-size:.88rem;color:var(--muted)}
+.shop-form-pick select,.shop-form-pick input{width:100%;min-height:48px;padding:0 12px;border:1px solid rgba(255,255,255,.18);border-radius:10px;background:#07100d;color:var(--text);font:inherit}
+.shop-form-pick .shop-qty{margin-top:12px;max-width:120px}
+@media(max-width:760px){.shop-head{grid-template-columns:1fr}.shop-grid{grid-template-columns:1fr}.shop-desc{min-height:0}.shop-bottom{align-items:flex-start;flex-direction:column}.shop-actions{width:100%}.shop-btn{flex:1}}
+
+
+/* ---------- private CODZE admin workspace ---------- */
+.admin-app{display:none;padding:80px 0 110px;background:#070d0b;min-height:70vh}
+.admin-app:target{display:block}
+.admin-wrap{max-width:1200px;margin:auto;padding:0 clamp(20px,5vw,72px)}
+.admin-head{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:32px}
+.admin-head h2{font:400 clamp(2.2rem,5vw,4rem) var(--serif)}
+.admin-panel{padding:clamp(20px,4vw,36px);border:1px solid rgba(255,255,255,.12);border-radius:20px;background:#0c1412}
+.admin-panel h3{font:400 1.8rem var(--serif);margin-bottom:18px}
+.admin-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.admin-form label{display:grid;gap:7px;color:var(--muted);font-size:.88rem}
+.admin-form input,.admin-form textarea,.admin-form select{width:100%;min-height:46px;padding:10px 12px;border:1px solid rgba(255,255,255,.17);border-radius:9px;background:#050b09;color:var(--text);font:inherit}
+.admin-form textarea{min-height:90px;resize:vertical}
+.admin-form .wide{grid-column:1/-1}
+.admin-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.admin-msg{min-height:24px;color:var(--mint);margin-top:12px;font-size:.9rem}
+.admin-tabs{display:flex;gap:8px;margin:26px 0 16px;flex-wrap:wrap}
+.admin-tabs button{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.18);border-radius:99px;padding:10px 18px;cursor:pointer}
+.admin-tabs button[aria-pressed=true]{background:rgba(134,224,143,.13);border-color:var(--mint)}
+.admin-list{display:grid;gap:10px}
+.admin-item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px;align-items:center;padding:16px;border:1px solid rgba(255,255,255,.1);border-radius:13px;background:rgba(255,255,255,.025)}
+.admin-item h4{font-weight:600;margin-bottom:5px}
+.admin-item p{color:var(--muted);font-size:.88rem;line-height:1.5;overflow-wrap:anywhere}
+.admin-item select,.admin-item textarea{background:#050b09;color:var(--text);border:1px solid rgba(255,255,255,.18);border-radius:8px;padding:8px}
+.admin-item textarea{display:block;width:100%;margin-top:8px;min-height:55px}
+.admin-item-actions{display:flex;gap:7px;flex-wrap:wrap}
+.admin-item-actions button{background:transparent;color:var(--text);border:1px solid rgba(255,255,255,.2);border-radius:99px;padding:8px 12px;cursor:pointer}
+.admin-item-actions button.danger{border-color:rgba(255,100,100,.4);color:#ffaaa3}
+.admin-hidden{display:none!important}
+@media(max-width:700px){.admin-form{grid-template-columns:1fr}.admin-form .wide{grid-column:auto}.admin-item{grid-template-columns:1fr}.admin-head{align-items:flex-start;flex-direction:column}}
+
 </style>
 </head>
 <body>
@@ -796,10 +863,10 @@ textarea.ce-in{min-height:120px;resize:vertical;line-height:1.5}
    <svg viewBox="507 502 570 537" aria-hidden="true"><g fill="#fff"><use href="#p1"/><use href="#p2"/></g></svg>
    <span class="wm">Codze<sup>TM</sup></span>
   </a>
-  <div class="links"><a href="#services">Services</a><a href="#work">Our Work</a><a href="#beyond">About</a></div>
+  <div class="links"><a href="#services">Services</a><a href="#shop">Shop</a><a href="#work">Our Work</a><a href="#beyond">About</a></div>
   <a class="pill" href="#contact">Start a project</a>
   <details class="menu" id="menu"><summary>Menu</summary>
-   <div class="panel"><a href="#services">Services</a><a href="#work">Our Work</a><a href="#beyond">About</a><a href="#contact">Start a project</a></div>
+   <div class="panel"><a href="#services">Services</a><a href="#shop">Shop</a><a href="#work">Our Work</a><a href="#beyond">About</a><a href="#contact">Start a project</a></div>
   </details>
  </nav>
 
@@ -869,6 +936,20 @@ textarea.ce-in{min-height:120px;resize:vertical;line-height:1.5}
   <div class="close"><p>One Vision. Every Digital Possibility.</p><div class="ctas"><a class="btn p" href="#contact">Start Your Project</a></div></div>
  </div>
 </section>
+
+<section class="shop" id="shop" aria-labelledby="shop-h">
+ <div class="wrap">
+  <div class="shop-head">
+   <div><p class="eyebrow">THE CODZE COLLECTION</p><h2 id="shop-h">Made to connect.<br>Built for your brand.</h2></div>
+   <p class="shop-intro">Explore our creative services and custom solutions. Choose what you need, tell us a little about your project, and we’ll take it from there.</p>
+  </div>
+  <div class="shop-grid" id="shop-grid" aria-live="polite"><div class="shop-empty">Loading the CODZE collection…</div></div>
+ </div>
+</section>
+<dialog class="shop-dialog" id="shop-dialog" aria-labelledby="shop-dialog-title">
+ <p class="eyebrow" id="shop-dialog-category">CODZE SERVICE</p><h3 id="shop-dialog-title"></h3><p id="shop-dialog-desc"></p>
+ <div class="shop-actions"><button class="shop-btn primary" id="shop-dialog-order" type="button">Request this service</button><button class="shop-btn" id="shop-dialog-close" type="button">Close</button></div>
+</dialog>
 
 <section class="mb" id="brand" aria-labelledby="mb-h">
  <div class="wrap">
@@ -961,6 +1042,15 @@ textarea.ce-in{min-height:120px;resize:vertical;line-height:1.5}
      <div class="ce-fl"><label for="cem">Preferred contact method</label><select class="ce-in" id="cem" name="method" aria-describedby="cem-e" aria-invalid="false"><option value="">Choose one</option><option value="email">Email</option><option value="whatsapp">WhatsApp</option><option value="phone">Phone call</option></select><p class="ce-er" id="cem-e" role="alert"></p></div>
      <div class="ce-fl"><label for="ced" id="cedl">Your email address or number</label><input class="ce-in" id="ced" name="detail" type="text" maxlength="80" aria-describedby="ced-e" aria-invalid="false"><p class="ce-er" id="ced-e" role="alert"></p></div>
      <div class="ce-fl"><label for="cep">Type of project</label><select class="ce-in" id="cep" name="project" aria-describedby="cep-e" aria-invalid="false"><option value="">Choose one</option><option value="cards">Smart NFC &amp; QR Cards</option><option value="web">Website Design</option><option value="menus">Digital Menus</option><option value="brand">Brand &amp; Graphic Design</option><option value="other">Something Else</option></select><p class="ce-er" id="cep-e" role="alert"></p></div>
+     <div class="shop-form-pick">
+      <label for="ceproduct">Choose a service or product (optional)</label>
+      <select id="ceproduct" name="product_id"><option value="">General project inquiry</option></select>
+      <label for="cequantity" style="margin-top:12px">Quantity</label>
+      <input class="shop-qty" id="cequantity" type="number" min="1" max="99" value="1" inputmode="numeric">
+     </div>
+     <div class="ce-fl" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden" aria-hidden="true">
+      <label for="cewebsite">Leave this field empty</label><input id="cewebsite" name="website" type="text" tabindex="-1" autocomplete="off">
+     </div>
      <div class="ce-fl"><label for="ceb">Short project description</label><textarea class="ce-in" id="ceb" name="about" maxlength="600" aria-describedby="ceb-e" aria-invalid="false"></textarea><p class="ce-er" id="ceb-e" role="alert"></p></div>
      <div class="ce-sub"><button class="btn p" id="cesub" type="submit">Prepare my inquiry</button></div>
      <p class="ce-note" id="cenote">We ask only for what is needed to reply about your project.</p>
@@ -1268,6 +1358,40 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return
 document.querySelectorAll('[data-io8]').forEach(el=>io.observe(el));
 })();
 </script>
+
+<section class="admin-app" id="admin" aria-labelledby="admin-title">
+ <div class="admin-wrap">
+  <div class="admin-head"><div><p class="eyebrow">PRIVATE WORKSPACE</p><h2 id="admin-title">CODZE Control Room</h2></div><button class="shop-btn" id="admin-logout" type="button" hidden>Sign out</button></div>
+  <div class="admin-panel" id="admin-login-panel">
+   <h3>Admin sign in</h3>
+   <form id="admin-login" class="admin-form">
+    <label class="wide">Email<input id="admin-email" type="email" autocomplete="username" required></label>
+    <label class="wide">Password<input id="admin-password" type="password" autocomplete="current-password" required></label>
+    <div class="wide admin-actions"><button class="shop-btn primary" type="submit">Sign in securely</button></div>
+   </form><p class="admin-msg" id="admin-login-msg" role="status">This area is restricted to approved CODZE administrators.</p>
+  </div>
+  <div id="admin-workspace" class="admin-hidden">
+   <div class="admin-panel">
+    <h3>Add / edit a service</h3>
+    <form id="admin-product-form" class="admin-form">
+     <input id="admin-product-id" type="hidden">
+     <label>Service name<input id="admin-product-name" maxlength="120" required></label>
+     <label>URL slug<input id="admin-product-slug" maxlength="140" required></label>
+     <label>Category<select id="admin-product-category"><option value="cards">NFC & QR Cards</option><option value="web">Website</option><option value="menus">Digital Menu</option><option value="brand">Brand Design</option><option value="other">Other</option></select></label>
+     <label>Price in EGP (leave empty for quote)<input id="admin-product-price" type="number" min="0" step="0.01"></label>
+     <label class="wide">Description<textarea id="admin-product-description" maxlength="2000"></textarea></label>
+     <label class="wide">Image URL (optional)<input id="admin-product-image" type="url" placeholder="https://..."></label>
+     <label>Display order<input id="admin-product-order" type="number" value="0"></label>
+     <label>Visibility<select id="admin-product-active"><option value="true">Visible</option><option value="false">Hidden</option></select></label>
+     <div class="wide admin-actions"><button class="shop-btn primary" type="submit">Save service</button><button class="shop-btn" id="admin-product-reset" type="button">Clear form</button></div>
+    </form><p class="admin-msg" id="admin-product-msg" role="status"></p>
+   </div>
+   <div class="admin-tabs"><button type="button" data-admin-tab="orders" aria-pressed="true">Orders</button><button type="button" data-admin-tab="products" aria-pressed="false">Services</button><button type="button" id="admin-refresh">Refresh</button></div>
+   <div class="admin-panel"><div id="admin-orders"><div class="admin-list" id="admin-order-list"></div></div><div id="admin-products" class="admin-hidden"><div class="admin-list" id="admin-product-list"></div></div></div>
+  </div>
+ </div>
+</section>
+
 <script>
 /* ===== CODZE contact configuration =====
    Nothing below is shown or used until you fill it in.
@@ -1328,7 +1452,7 @@ function show(state,text){
  else{
   sum.hidden=false;
   if(state==='error'){H.textContent='We couldn’t send your inquiry.';P.textContent='Something went wrong, so nothing was sent. You can try again, or copy your message and send it another way.'}
-  else if(state==='notify'){H.textContent='Your inquiry reached the server, but Telegram delivery was not confirmed.';P.textContent='The website did not confirm that the Telegram notification was delivered. Please don’t assume the studio has received it; use the copy option below if you need to contact them now.'}
+  else if(state==='notify'){H.textContent='Your inquiry reached the server, but Telegram delivery was not confirmed.';P.textContent='Your request has been saved successfully. The notification to the studio could not be confirmed, so please don’t submit the same request again. If you need an immediate reply, you can also contact the studio directly.'}
   else{H.textContent='Your inquiry is ready, but it hasn’t been sent.';P.textContent='This website can’t send messages yet, so nothing has been delivered. Copy your message below and send it to the studio through the contact details they share with you.'}
   const note=document.createElement('span');note.className='ce-cp';note.setAttribute('aria-live','polite');
   act.append(btn('Copy message',async()=>{note.textContent=(await copy())?'Copied.':'Couldn’t copy automatically. Select the text above and copy it.'}));
@@ -1346,7 +1470,7 @@ F.addEventListener('submit',async e=>{
  if(!C.formEndpoint){show('ready',text);return}
  const b=$('cesub');b.disabled=true;b.textContent='Sending…';
  try{
-  const r=await fetch(C.formEndpoint,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({name:el.name.value.trim(),contactMethod:MN[el.method.value],contact:el.detail.value.trim(),projectType:PN[el.project.value],message:el.about.value.trim()})});
+  const r=await fetch(C.formEndpoint,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({name:el.name.value.trim(),contact_method:el.method.value,contact:el.detail.value.trim(),project_type:el.project.value,message:el.about.value.trim(),product_id:document.getElementById("ceproduct")?.value||undefined,quantity:Number(document.getElementById("cequantity")?.value||1),website:document.getElementById("cewebsite")?.value||""})});
   let result={};try{result=await r.json()}catch(_){}
   if(r.ok&&result.ok===true&&result.notification==='sent')show('sent',text);
   else if(r.ok&&result.ok===true&&(result.notification==='failed'||result.notification==='pending_setup'))show('notify',text);
@@ -1368,6 +1492,128 @@ $('cego').addEventListener('click',e=>{e.preventDefault();$('inquiry').scrollInt
 /* entrance: runs once */
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}}),{rootMargin:'0px 0px -10% 0px'});
 document.querySelectorAll('[data-io9]').forEach(x=>io.observe(x));
+})();
+</script>
+
+<script>
+(()=> {
+ const API='https://xsafflsjeunbdgzunigh.supabase.co';
+ const KEY='sb_publishable_dJ8YT5bMXZsGqxxZSV71oQ_d9kOKyvu';
+ const grid=document.getElementById('shop-grid'),picker=document.getElementById('ceproduct');
+ const dialog=document.getElementById('shop-dialog');
+ if(!grid||!picker)return;
+ const categories={cards:'NFC & QR',web:'WEBSITES',menus:'DIGITAL MENUS',brand:'BRAND DESIGN',other:'CREATIVE'};
+ const escapeHTML=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ let products=[],active=null;
+ function price(p){return p.price===null||p.price===undefined?'Request a Quote':new Intl.NumberFormat('en-EG',{style:'currency',currency:p.currency||'EGP',maximumFractionDigits:2}).format(Number(p.price))}
+ function card(p){
+  const art=p.image_url?'<img src="'+escapeHTML(p.image_url)+'" alt="'+escapeHTML(p.name)+'" loading="lazy">':'<span class="shop-art-mark">CODZE</span>';
+  return '<article class="shop-card"><div class="shop-art">'+art+'</div><div class="shop-body"><div class="shop-meta"><span>'+escapeHTML(categories[p.category]||'CODZE SERVICE')+'</span><span>01 / 01</span></div><h3>'+escapeHTML(p.name)+'</h3><p class="shop-desc">'+escapeHTML(p.description||'A custom solution designed around your business.')+'</p><div class="shop-bottom"><span class="shop-price">'+escapeHTML(price(p))+'</span><div class="shop-actions"><button class="shop-btn" type="button" data-details="'+escapeHTML(p.id)+'">Details</button><button class="shop-btn primary" type="button" data-order="'+escapeHTML(p.id)+'">Request</button></div></div></div></article>';
+ }
+ function render(){
+  if(!products.length){grid.innerHTML='<div class="shop-empty">Our collection is being prepared. You can still tell us what you need through the project inquiry form below.</div>';return}
+  grid.innerHTML=products.map(card).join('');
+  picker.innerHTML='<option value="">General project inquiry</option>'+products.map(p=>'<option value="'+escapeHTML(p.id)+'">'+escapeHTML(p.name)+'</option>').join('');
+ }
+ function selectProduct(p){
+  picker.value=p.id;
+  const cat=document.getElementById('cep');if(cat)cat.value=p.category;
+  document.getElementById('inquiry')?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+  setTimeout(()=>document.getElementById('cen')?.focus({preventScroll:true}),450);
+ }
+ grid.addEventListener('click',e=>{
+  const d=e.target.closest('[data-details]'),o=e.target.closest('[data-order]');
+  if(d){active=products.find(p=>p.id===d.dataset.details);if(!active)return;
+   document.getElementById('shop-dialog-category').textContent=categories[active.category]||'CODZE SERVICE';
+   document.getElementById('shop-dialog-title').textContent=active.name;
+   document.getElementById('shop-dialog-desc').textContent=active.description||'A custom solution designed around your business.';
+   if(typeof dialog.showModal==='function')dialog.showModal();else selectProduct(active);
+  }
+  if(o){const p=products.find(x=>x.id===o.dataset.order);if(p)selectProduct(p)}
+ });
+ document.getElementById('shop-dialog-order')?.addEventListener('click',()=>{if(active){dialog.close();selectProduct(active)}});
+ document.getElementById('shop-dialog-close')?.addEventListener('click',()=>dialog.close());
+ picker.addEventListener('change',()=>{const p=products.find(x=>x.id===picker.value);if(p){const cat=document.getElementById('cep');if(cat)cat.value=p.category}});
+ async function load(){
+  try{
+   const r=await fetch(API+'/rest/v1/codze_products?select=id,name,slug,description,category,price,currency,image_url,gallery_urls&is_active=eq.true&order=sort_order.asc',{headers:{apikey:KEY,Authorization:'Bearer '+KEY,Accept:'application/json'}});
+   if(!r.ok)throw new Error('catalog unavailable');
+   products=await r.json();if(!Array.isArray(products))throw new Error('invalid catalog');
+   render();
+  }catch(_){grid.innerHTML='<div class="shop-empty">We couldn’t load the collection right now. You can still send a project inquiry below or contact us on WhatsApp.</div>'}
+ }
+ load();
+})();
+</script>
+
+<script>
+(()=> {
+ const API='https://xsafflsjeunbdgzunigh.supabase.co',KEY='sb_publishable_dJ8YT5bMXZsGqxxZSV71oQ_d9kOKyvu';
+ const $=id=>document.getElementById(id),login=$('admin-login'),loginPanel=$('admin-login-panel'),workspace=$('admin-workspace');
+ if(!login||!location.hash.startsWith('#admin'))return;
+ let token='',products=[],orders=[];
+ const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ async function api(path,opts={}){
+  const r=await fetch(API+path,{...opts,headers:{apikey:KEY,Authorization:'Bearer '+(token||KEY),'Content-Type':'application/json',Prefer:opts.prefer||'return=minimal',...(opts.headers||{})}});
+  const t=await r.text();let data=null;try{data=t?JSON.parse(t):null}catch(_){}
+  if(!r.ok)throw new Error(data?.message||data?.hint||'Request failed ('+r.status+')');
+  return data;
+ }
+ function message(id,t){$(id).textContent=t||''}
+ function signedIn(ok){loginPanel.classList.toggle('admin-hidden',ok);workspace.classList.toggle('admin-hidden',!ok);$('admin-logout').hidden=!ok}
+ login.addEventListener('submit',async e=>{
+  e.preventDefault();message('admin-login-msg','Signing in…');
+  try{
+   const r=await fetch(API+'/auth/v1/token?grant_type=password',{method:'POST',headers:{apikey:KEY,'Content-Type':'application/json'},body:JSON.stringify({email:$('admin-email').value.trim(),password:$('admin-password').value})});
+   const data=await r.json();if(!r.ok||!data.access_token)throw new Error(data.msg||data.message||'Email or password is incorrect.');
+   token=data.access_token;
+   const admins=await api('/rest/v1/codze_admins?select=user_id&user_id=eq.'+encodeURIComponent(data.user.id));
+   if(!Array.isArray(admins)||!admins.length){token='';throw new Error('This account is not on the CODZE admin list. Access denied.')}
+   signedIn(true);message('admin-login-msg','');await refresh();
+  }catch(err){signedIn(false);message('admin-login-msg',err.message)}
+ });
+ $('admin-logout').addEventListener('click',()=>{token='';signedIn(false);$('admin-password').value='';message('admin-login-msg','You have signed out.')});
+ async function refresh(){
+  try{
+   [orders,products]=await Promise.all([
+    api('/rest/v1/codze_orders?select=*&order=created_at.desc&limit=100'),
+    api('/rest/v1/codze_products?select=*&order=sort_order.asc,created_at.desc')
+   ]);
+   renderOrders();renderProducts();
+  }catch(err){message('admin-product-msg','Could not refresh data: '+err.message)}
+ }
+ function renderOrders(){
+  const root=$('admin-order-list');
+  if(!orders.length){root.innerHTML='<p class="shop-empty">No orders yet.</p>';return}
+  root.innerHTML=orders.map(o=>'<article class="admin-item"><div><h4>'+esc(o.name)+' · '+esc(o.product_name_snapshot||o.project_type)+'</h4><p>'+esc(o.contact_method)+' · '+esc(o.contact)+' · '+new Date(o.created_at).toLocaleString()+'</p><p>'+esc(o.message)+'</p><label style="display:block;margin-top:10px;color:var(--muted)">Internal notes<textarea data-notes="'+esc(o.id)+'">'+esc(o.admin_notes||'')+'</textarea></label></div><div class="admin-item-actions"><select data-status="'+esc(o.id)+'">'+['new','in_progress','waiting_customer','completed','cancelled'].map(v=>'<option value="'+v+'" '+(o.status===v?'selected':'')+'>'+v.replace('_',' ')+'</option>').join('')+'</select><button data-save-order="'+esc(o.id)+'">Save</button><button class="danger" data-delete-order="'+esc(o.id)+'">Delete</button></div></article>').join('');
+ }
+ function renderProducts(){
+  const root=$('admin-product-list');
+  if(!products.length){root.innerHTML='<p class="shop-empty">No services added yet.</p>';return}
+  root.innerHTML=products.map(p=>'<article class="admin-item"><div><h4>'+esc(p.name)+'</h4><p>'+esc(p.category)+' · '+(p.price==null?'Quote':esc(p.price)+' EGP')+' · '+(p.is_active?'Visible':'Hidden')+'</p><p>'+esc(p.description)+'</p></div><div class="admin-item-actions"><button data-edit-product="'+esc(p.id)+'">Edit</button><button class="danger" data-delete-product="'+esc(p.id)+'">Delete</button></div></article>').join('');
+ }
+ $('admin-order-list').addEventListener('click',async e=>{
+  const save=e.target.closest('[data-save-order]'),del=e.target.closest('[data-delete-order]');
+  try{
+   if(save){const id=save.dataset.saveOrder,status=document.querySelector('[data-status="'+id+'"]').value,admin_notes=document.querySelector('[data-notes="'+id+'"]').value;await api('/rest/v1/codze_orders?id=eq.'+id,{method:'PATCH',body:JSON.stringify({status,admin_notes})});message('admin-product-msg','Order updated.');await refresh()}
+   if(del&&confirm('Delete this order permanently?')){await api('/rest/v1/codze_orders?id=eq.'+del.dataset.deleteOrder,{method:'DELETE'});await refresh()}
+  }catch(err){message('admin-product-msg',err.message)}
+ });
+ function resetProduct(){ $('admin-product-form').reset();$('admin-product-id').value='';$('admin-product-order').value='0';message('admin-product-msg','') }
+ $('admin-product-reset').addEventListener('click',resetProduct);
+ $('admin-product-form').addEventListener('submit',async e=>{
+  e.preventDefault();const id=$('admin-product-id').value;
+  const body={name:$('admin-product-name').value.trim(),slug:$('admin-product-slug').value.trim().toLowerCase().replace(/[^a-z0-9-]+/g,'-').replace(/^-|-$/g,''),category:$('admin-product-category').value,price:$('admin-product-price').value===''?null:Number($('admin-product-price').value),description:$('admin-product-description').value.trim(),image_url:$('admin-product-image').value.trim()||null,sort_order:Number($('admin-product-order').value)||0,is_active:$('admin-product-active').value==='true'};
+  try{await api('/rest/v1/codze_products'+(id?'?id=eq.'+id:''),{method:id?'PATCH':'POST',body:JSON.stringify(body),prefer:'return=representation'});resetProduct();message('admin-product-msg','Service saved successfully.');await refresh()}
+  catch(err){message('admin-product-msg',err.message)}
+ });
+ $('admin-product-list').addEventListener('click',async e=>{
+  const edit=e.target.closest('[data-edit-product]'),del=e.target.closest('[data-delete-product]');
+  if(edit){const p=products.find(x=>x.id===edit.dataset.editProduct);if(!p)return;$('admin-product-id').value=p.id;$('admin-product-name').value=p.name;$('admin-product-slug').value=p.slug;$('admin-product-category').value=p.category;$('admin-product-price').value=p.price??'';$('admin-product-description').value=p.description;$('admin-product-image').value=p.image_url||'';$('admin-product-order').value=p.sort_order;$('admin-product-active').value=String(p.is_active);$('admin-product-form').scrollIntoView({behavior:'smooth',block:'center'})}
+  if(del&&confirm('Delete this service? Existing order history will be preserved.')){try{await api('/rest/v1/codze_products?id=eq.'+del.dataset.deleteProduct,{method:'DELETE'});await refresh()}catch(err){message('admin-product-msg',err.message)}}
+ });
+ document.querySelectorAll('[data-admin-tab]').forEach(b=>b.addEventListener('click',()=>{const ordersTab=b.dataset.adminTab==='orders';$('admin-orders').classList.toggle('admin-hidden',!ordersTab);$('admin-products').classList.toggle('admin-hidden',ordersTab);document.querySelectorAll('[data-admin-tab]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)))}));
+ $('admin-refresh').addEventListener('click',refresh);
 })();
 </script>
 </body>
