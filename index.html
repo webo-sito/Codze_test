@@ -761,6 +761,42 @@ textarea.ce-in{min-height:120px;resize:vertical;line-height:1.5}
 .ce-ref.r3,.ce-ref.r4{display:none}.ce-ref.r1{left:3%;top:34px;width:92px}.ce-ref.r2{right:3%;top:30px;width:104px}
 .ft-grid{grid-template-columns:1fr 1fr}.ft-brand{grid-column:1/-1}.ft-col.ct{grid-column:1/-1}}
 @media(prefers-reduced-motion:reduce){.ce-st:not([hidden]){animation:none}}
+
+/* ---------- CODZE commerce catalog ---------- */
+.shop{position:relative;padding:clamp(88px,13vh,150px) 0;background:linear-gradient(180deg,#08100e,#030706 78%);overflow:hidden}
+.shop:before{content:"";position:absolute;inset:0 0 auto;height:55%;pointer-events:none;background:radial-gradient(60% 60% at 85% 10%,rgba(0,166,136,.13),transparent 70%)}
+.shop-head{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:end;margin-bottom:48px}
+.shop h2{font:400 clamp(2.7rem,6vw,5.5rem)/.98 var(--serif);letter-spacing:-.025em}
+.shop-intro{color:var(--muted);line-height:1.65;max-width:42ch}
+.shop-grid{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.shop-card{min-width:0;border:1px solid rgba(255,255,255,.1);border-radius:22px;overflow:hidden;background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.012));transition:transform .35s var(--ease),border-color .35s}
+.shop-card:hover{transform:translateY(-5px);border-color:rgba(134,224,143,.42)}
+.shop-art{position:relative;aspect-ratio:16/9;overflow:hidden;display:grid;place-items:center;background:radial-gradient(70% 80% at 50% 30%,rgba(0,166,136,.24),transparent 72%),linear-gradient(145deg,#14211d,#080d0b)}
+.shop-art img{width:100%;height:100%;object-fit:cover}
+.shop-art-mark{font:400 clamp(2rem,5vw,4rem)/1 var(--serif);letter-spacing:.02em;color:rgba(242,245,243,.9)}
+.shop-art-mark:after{content:"";display:block;width:42px;height:2px;background:var(--mint);margin:16px auto 0}
+.shop-body{padding:clamp(18px,2.6vw,28px)}
+.shop-meta{display:flex;justify-content:space-between;gap:12px;align-items:center;color:var(--mint);font-size:.72rem;letter-spacing:.13em;text-transform:uppercase}
+.shop-card h3{font:400 clamp(1.5rem,2.8vw,2.15rem)/1.08 var(--serif);margin:14px 0 10px}
+.shop-desc{color:var(--muted);line-height:1.55;min-height:3.1em}
+.shop-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:24px}
+.shop-price{font-size:.9rem;color:var(--text);font-weight:600}
+.shop-actions{display:flex;gap:8px;flex-wrap:wrap}
+.shop-btn{min-height:42px;padding:0 16px;border-radius:99px;border:1px solid rgba(255,255,255,.2);background:transparent;color:var(--text);font:500 .88rem var(--sans);cursor:pointer}
+.shop-btn.primary{background:var(--mint);color:#04120b;border-color:var(--mint)}
+.shop-btn:hover{border-color:var(--mint)}
+.shop-empty{grid-column:1/-1;padding:36px;border:1px dashed rgba(255,255,255,.2);border-radius:18px;color:var(--muted);text-align:center;line-height:1.6}
+.shop-dialog{width:min(560px,calc(100% - 28px));max-height:85svh;overflow:auto;margin:auto;border:1px solid rgba(134,224,143,.3);border-radius:22px;background:#0c1412;color:var(--text);padding:28px;box-shadow:0 30px 90px #0009}
+.shop-dialog::backdrop{background:rgba(0,0,0,.78);backdrop-filter:blur(6px)}
+.shop-dialog h3{font:400 2rem var(--serif);margin:10px 0}
+.shop-dialog p{color:var(--muted);line-height:1.6}
+.shop-dialog .shop-actions{margin-top:24px}
+.shop-form-pick{border:1px solid rgba(134,224,143,.24);border-radius:14px;padding:16px;margin:0 0 18px;background:rgba(134,224,143,.045)}
+.shop-form-pick label{display:block;margin-bottom:8px;font-size:.88rem;color:var(--muted)}
+.shop-form-pick select,.shop-form-pick input{width:100%;min-height:48px;padding:0 12px;border:1px solid rgba(255,255,255,.18);border-radius:10px;background:#07100d;color:var(--text);font:inherit}
+.shop-form-pick .shop-qty{margin-top:12px;max-width:120px}
+@media(max-width:760px){.shop-head{grid-template-columns:1fr}.shop-grid{grid-template-columns:1fr}.shop-desc{min-height:0}.shop-bottom{align-items:flex-start;flex-direction:column}.shop-actions{width:100%}.shop-btn{flex:1}}
+
 </style>
 </head>
 <body>
@@ -796,10 +832,10 @@ textarea.ce-in{min-height:120px;resize:vertical;line-height:1.5}
    <svg viewBox="507 502 570 537" aria-hidden="true"><g fill="#fff"><use href="#p1"/><use href="#p2"/></g></svg>
    <span class="wm">Codze<sup>TM</sup></span>
   </a>
-  <div class="links"><a href="#services">Services</a><a href="#work">Our Work</a><a href="#beyond">About</a></div>
+  <div class="links"><a href="#services">Services</a><a href="#shop">Shop</a><a href="#work">Our Work</a><a href="#beyond">About</a></div>
   <a class="pill" href="#contact">Start a project</a>
   <details class="menu" id="menu"><summary>Menu</summary>
-   <div class="panel"><a href="#services">Services</a><a href="#work">Our Work</a><a href="#beyond">About</a><a href="#contact">Start a project</a></div>
+   <div class="panel"><a href="#services">Services</a><a href="#shop">Shop</a><a href="#work">Our Work</a><a href="#beyond">About</a><a href="#contact">Start a project</a></div>
   </details>
  </nav>
 
@@ -869,6 +905,20 @@ textarea.ce-in{min-height:120px;resize:vertical;line-height:1.5}
   <div class="close"><p>One Vision. Every Digital Possibility.</p><div class="ctas"><a class="btn p" href="#contact">Start Your Project</a></div></div>
  </div>
 </section>
+
+<section class="shop" id="shop" aria-labelledby="shop-h">
+ <div class="wrap">
+  <div class="shop-head">
+   <div><p class="eyebrow">THE CODZE COLLECTION</p><h2 id="shop-h">Made to connect.<br>Built for your brand.</h2></div>
+   <p class="shop-intro">Explore our creative services and custom solutions. Choose what you need, tell us a little about your project, and we’ll take it from there.</p>
+  </div>
+  <div class="shop-grid" id="shop-grid" aria-live="polite"><div class="shop-empty">Loading the CODZE collection…</div></div>
+ </div>
+</section>
+<dialog class="shop-dialog" id="shop-dialog" aria-labelledby="shop-dialog-title">
+ <p class="eyebrow" id="shop-dialog-category">CODZE SERVICE</p><h3 id="shop-dialog-title"></h3><p id="shop-dialog-desc"></p>
+ <div class="shop-actions"><button class="shop-btn primary" id="shop-dialog-order" type="button">Request this service</button><button class="shop-btn" id="shop-dialog-close" type="button">Close</button></div>
+</dialog>
 
 <section class="mb" id="brand" aria-labelledby="mb-h">
  <div class="wrap">
@@ -961,6 +1011,15 @@ textarea.ce-in{min-height:120px;resize:vertical;line-height:1.5}
      <div class="ce-fl"><label for="cem">Preferred contact method</label><select class="ce-in" id="cem" name="method" aria-describedby="cem-e" aria-invalid="false"><option value="">Choose one</option><option value="email">Email</option><option value="whatsapp">WhatsApp</option><option value="phone">Phone call</option></select><p class="ce-er" id="cem-e" role="alert"></p></div>
      <div class="ce-fl"><label for="ced" id="cedl">Your email address or number</label><input class="ce-in" id="ced" name="detail" type="text" maxlength="80" aria-describedby="ced-e" aria-invalid="false"><p class="ce-er" id="ced-e" role="alert"></p></div>
      <div class="ce-fl"><label for="cep">Type of project</label><select class="ce-in" id="cep" name="project" aria-describedby="cep-e" aria-invalid="false"><option value="">Choose one</option><option value="cards">Smart NFC &amp; QR Cards</option><option value="web">Website Design</option><option value="menus">Digital Menus</option><option value="brand">Brand &amp; Graphic Design</option><option value="other">Something Else</option></select><p class="ce-er" id="cep-e" role="alert"></p></div>
+     <div class="shop-form-pick">
+      <label for="ceproduct">Choose a service or product (optional)</label>
+      <select id="ceproduct" name="product_id"><option value="">General project inquiry</option></select>
+      <label for="cequantity" style="margin-top:12px">Quantity</label>
+      <input class="shop-qty" id="cequantity" type="number" min="1" max="99" value="1" inputmode="numeric">
+     </div>
+     <div class="ce-fl" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden" aria-hidden="true">
+      <label for="cewebsite">Leave this field empty</label><input id="cewebsite" name="website" type="text" tabindex="-1" autocomplete="off">
+     </div>
      <div class="ce-fl"><label for="ceb">Short project description</label><textarea class="ce-in" id="ceb" name="about" maxlength="600" aria-describedby="ceb-e" aria-invalid="false"></textarea><p class="ce-er" id="ceb-e" role="alert"></p></div>
      <div class="ce-sub"><button class="btn p" id="cesub" type="submit">Prepare my inquiry</button></div>
      <p class="ce-note" id="cenote">We ask only for what is needed to reply about your project.</p>
@@ -1346,7 +1405,7 @@ F.addEventListener('submit',async e=>{
  if(!C.formEndpoint){show('ready',text);return}
  const b=$('cesub');b.disabled=true;b.textContent='Sending…';
  try{
-  const r=await fetch(C.formEndpoint,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({name:el.name.value.trim(),contactMethod:MN[el.method.value],contact:el.detail.value.trim(),projectType:PN[el.project.value],message:el.about.value.trim()})});
+  const r=await fetch(C.formEndpoint,{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify({name:el.name.value.trim(),contact_method:el.method.value,contact:el.detail.value.trim(),project_type:el.project.value,message:el.about.value.trim(),product_id:document.getElementById("ceproduct")?.value||undefined,quantity:Number(document.getElementById("cequantity")?.value||1),website:document.getElementById("cewebsite")?.value||""})});
   let result={};try{result=await r.json()}catch(_){}
   if(r.ok&&result.ok===true&&result.notification==='sent')show('sent',text);
   else if(r.ok&&result.ok===true&&(result.notification==='failed'||result.notification==='pending_setup'))show('notify',text);
@@ -1368,6 +1427,57 @@ $('cego').addEventListener('click',e=>{e.preventDefault();$('inquiry').scrollInt
 /* entrance: runs once */
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}}),{rootMargin:'0px 0px -10% 0px'});
 document.querySelectorAll('[data-io9]').forEach(x=>io.observe(x));
+})();
+</script>
+
+<script>
+(()=> {
+ const API='https://xsafflsjeunbdgzunigh.supabase.co';
+ const KEY='sb_publishable_dJ8YT5bMXZsGqxxZSV71oQ_d9kOKyvu';
+ const grid=document.getElementById('shop-grid'),picker=document.getElementById('ceproduct');
+ const dialog=document.getElementById('shop-dialog');
+ if(!grid||!picker)return;
+ const categories={cards:'NFC & QR',web:'WEBSITES',menus:'DIGITAL MENUS',brand:'BRAND DESIGN',other:'CREATIVE'};
+ const escapeHTML=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ let products=[],active=null;
+ function price(p){return p.price===null||p.price===undefined?'Request a Quote':new Intl.NumberFormat('en-EG',{style:'currency',currency:p.currency||'EGP',maximumFractionDigits:2}).format(Number(p.price))}
+ function card(p){
+  const art=p.image_url?'<img src="'+escapeHTML(p.image_url)+'" alt="'+escapeHTML(p.name)+'" loading="lazy">':'<span class="shop-art-mark">CODZE</span>';
+  return '<article class="shop-card"><div class="shop-art">'+art+'</div><div class="shop-body"><div class="shop-meta"><span>'+escapeHTML(categories[p.category]||'CODZE SERVICE')+'</span><span>01 / 01</span></div><h3>'+escapeHTML(p.name)+'</h3><p class="shop-desc">'+escapeHTML(p.description||'A custom solution designed around your business.')+'</p><div class="shop-bottom"><span class="shop-price">'+escapeHTML(price(p))+'</span><div class="shop-actions"><button class="shop-btn" type="button" data-details="'+escapeHTML(p.id)+'">Details</button><button class="shop-btn primary" type="button" data-order="'+escapeHTML(p.id)+'">Request</button></div></div></div></article>';
+ }
+ function render(){
+  if(!products.length){grid.innerHTML='<div class="shop-empty">Our collection is being prepared. You can still tell us what you need through the project inquiry form below.</div>';return}
+  grid.innerHTML=products.map(card).join('');
+  picker.innerHTML='<option value="">General project inquiry</option>'+products.map(p=>'<option value="'+escapeHTML(p.id)+'">'+escapeHTML(p.name)+'</option>').join('');
+ }
+ function selectProduct(p){
+  picker.value=p.id;
+  const cat=document.getElementById('cep');if(cat)cat.value=p.category;
+  document.getElementById('inquiry')?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+  setTimeout(()=>document.getElementById('cen')?.focus({preventScroll:true}),450);
+ }
+ grid.addEventListener('click',e=>{
+  const d=e.target.closest('[data-details]'),o=e.target.closest('[data-order]');
+  if(d){active=products.find(p=>p.id===d.dataset.details);if(!active)return;
+   document.getElementById('shop-dialog-category').textContent=categories[active.category]||'CODZE SERVICE';
+   document.getElementById('shop-dialog-title').textContent=active.name;
+   document.getElementById('shop-dialog-desc').textContent=active.description||'A custom solution designed around your business.';
+   if(typeof dialog.showModal==='function')dialog.showModal();else selectProduct(active);
+  }
+  if(o){const p=products.find(x=>x.id===o.dataset.order);if(p)selectProduct(p)}
+ });
+ document.getElementById('shop-dialog-order')?.addEventListener('click',()=>{if(active){dialog.close();selectProduct(active)}});
+ document.getElementById('shop-dialog-close')?.addEventListener('click',()=>dialog.close());
+ picker.addEventListener('change',()=>{const p=products.find(x=>x.id===picker.value);if(p){const cat=document.getElementById('cep');if(cat)cat.value=p.category}});
+ async function load(){
+  try{
+   const r=await fetch(API+'/rest/v1/codze_products?select=id,name,slug,description,category,price,currency,image_url,gallery_urls&is_active=eq.true&order=sort_order.asc',{headers:{apikey:KEY,Authorization:'Bearer '+KEY,Accept:'application/json'}});
+   if(!r.ok)throw new Error('catalog unavailable');
+   products=await r.json();if(!Array.isArray(products))throw new Error('invalid catalog');
+   render();
+  }catch(_){grid.innerHTML='<div class="shop-empty">We couldn’t load the collection right now. You can still send a project inquiry below or contact us on WhatsApp.</div>'}
+ }
+ load();
 })();
 </script>
 </body>
